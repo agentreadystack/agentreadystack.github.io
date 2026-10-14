@@ -1,0 +1,41 @@
+:root{--bg:#0a1628;--bg2:#0f1f38;--card:#132a4a;--line:#1e3a5f;--text:#e6eef8;--muted:#9fb3cc;--em:#10b981;--cy:#22d3ee;--grad:linear-gradient(90deg,#10b981,#22d3ee)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+a{color:var(--cy);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header.top{position:sticky;top:0;z-index:10;background:rgba(10,22,40,.85);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;gap:24px;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:700;color:var(--text)}.brand img{width:34px;height:34px;border-radius:8px}
+.nav .links{margin-left:auto;display:flex;gap:20px;font-size:.95rem}.nav .links a{color:var(--muted)}
+.btn{display:inline-block;padding:12px 22px;border-radius:10px;font-weight:600;border:1px solid var(--line);color:var(--text)}
+.btn:hover{text-decoration:none;border-color:var(--cy)}
+.btn.primary{background:var(--grad);color:#05211a;border:0}
+.hero{padding:96px 0 72px;text-align:center;background:radial-gradient(ellipse at top,rgba(34,211,238,.15),transparent 60%)}
+.pill{display:inline-block;padding:4px 12px;border:1px solid var(--line);border-radius:999px;color:var(--cy);font-size:.85rem;margin-bottom:20px}
+h1{font-size:clamp(2rem,5vw,3.4rem);line-height:1.15;margin:0 0 20px}
+.g{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:1.15rem;color:var(--muted);max-width:720px;margin:0 auto 32px}
+.cta{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.stack{margin-top:28px;color:var(--muted);font-size:.9rem}
+section{padding:72px 0;border-top:1px solid var(--line)}
+section.alt{background:var(--bg2)}
+h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 12px;text-align:center}
+.sub{color:var(--muted);text-align:center;max-width:680px;margin:0 auto 40px}
+.grid{display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
+.card h3{margin:0 0 8px;font-size:1.1rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
+.tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.tag.ok{background:rgba(16,185,129,.15);color:var(--em)}.tag.soon{background:rgba(34,211,238,.12);color:var(--cy)}
+.steps{counter-reset:s}.steps .card h3::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--grad);color:#05211a;margin-right:10px;font-size:.9rem}
+pre{background:#071122;border:1px solid var(--line);border-radius:10px;padding:16px;overflow:auto;font-size:.88rem;color:#cfe3f7}
+.price{display:flex;flex-direction:column}.price .amt{font-size:2.4rem;font-weight:800;margin:8px 0}.price .amt small{font-size:1rem;color:var(--muted);font-weight:500}
+.price .early{color:var(--em);font-size:.9rem;margin-bottom:12px}
+.price ul{padding-left:18px;color:var(--muted);flex:1}.price li{margin:6px 0}
+.price.feat{border-color:var(--em);box-shadow:0 0 0 1px var(--em),0 10px 40px rgba(16,185,129,.15)}
+.notice{text-align:center;margin-top:28px;color:var(--muted)}
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600}details p{color:var(--muted);margin:10px 0 0}
+footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-size:.9rem}
+.foot{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}.foot nav{display:flex;gap:18px;flex-wrap:wrap}
+.legal{max-width:780px;padding:48px 20px}.legal h1{font-size:2rem}.legal h2{text-align:left;font-size:1.25rem;margin-top:32px}.legal p,.legal li{color:var(--muted)}
+@media(max-width:720px){.nav .links{display:none}.hero{padding:64px 0 48px}}
