@@ -25,7 +25,7 @@ h2{font-size:clamp(1.6rem,3.5vw,2.3rem);margin:0 0 12px;text-align:center}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px}
 .card h3{margin:0 0 8px;font-size:1.1rem}.card p{margin:0;color:var(--muted);font-size:.95rem}
 .tag{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:6px;margin-left:6px;vertical-align:middle}
-.tag.ok{background:rgba(16,185,129,.15);color:var(--em)}.tag.soon{background:rgba(34,211,238,.12);color:var(--cy)}
+.tag.ok{background:rgba(16,185,129,.15);color:#34d399}.tag.soon{background:rgba(34,211,238,.12);color:var(--cy)}
 .steps{counter-reset:s}.steps .card h3::before{counter-increment:s;content:counter(s);display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--grad);color:#05211a;margin-right:10px;font-size:.9rem}
 pre{background:#071122;border:1px solid var(--line);border-radius:10px;padding:16px;overflow:auto;font-size:.88rem;color:#cfe3f7}
 .price{display:flex;flex-direction:column}.price .amt{font-size:2.4rem;font-weight:800;margin:8px 0}.price .amt small{font-size:1rem;color:var(--muted);font-weight:500}
@@ -39,6 +39,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;color:var(--muted);font-s
 .foot{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}.foot nav{display:flex;gap:18px;flex-wrap:wrap}
 .legal{max-width:780px;padding:48px 20px}.legal h1{font-size:2rem}.legal h2{text-align:left;font-size:1.25rem;margin-top:32px}.legal p,.legal li{color:var(--muted)}
 section[id]{scroll-margin-top:72px}
+a[href^="mailto:"]{text-decoration:underline;text-underline-offset:2px}
 @media(max-width:720px){.nav{flex-wrap:wrap;row-gap:0;height:auto;padding-top:8px}section[id]{scroll-margin-top:110px}.nav .links{margin-left:0;width:100%;gap:4px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;font-size:.9rem}.nav .links::-webkit-scrollbar{display:none}.nav .links a{flex:0 0 auto;padding:10px 10px;min-height:44px;display:inline-flex;align-items:center}.nav .links a:first-child{padding-left:0}.hero{padding:64px 0 48px}}
 
 .demo-frame{margin-top:28px;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:#0b1220;box-shadow:0 20px 50px rgba(0,0,0,.35)}
