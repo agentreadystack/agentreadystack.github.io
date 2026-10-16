@@ -4,7 +4,7 @@
 <meta name="description" content="A production-minded Spring Boot 3 + Vue 3 SaaS starter with CLAUDE.md, AGENTS.md, subagents and skills, so Claude Code and Codex can build features that fit your codebase.">
 <link rel="canonical" href="https://agentreadystack.com/"><meta property="og:url" content="https://agentreadystack.com/"><meta property="og:title" content="AgentReady Stack"><meta property="og:description" content="AI-ready Spring Boot + Vue SaaS starter for Claude Code & Codex."><meta property="og:image" content="https://agentreadystack.com/assets/logo.png"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@agentreadystack">
 </head><body>
-<header class="top"><div class="wrap nav"><a class="brand" href="/"><img src="/assets/logo.png" alt="AgentReady Stack logo">AgentReady Stack</a><nav class="links"><a href="/#features">Features</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/claim/">Claim access</a></nav></div></header>
+<header class="top"><div class="wrap nav"><a class="brand" href="/"><img src="/assets/logo.png" alt="AgentReady Stack logo">AgentReady Stack</a><nav class="links"><a href="/#demo">Demo</a><a href="/#features">Features</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/claim/">Claim access</a></nav></div></header>
 <main>
 <div class="hero"><div class="wrap">
   <span class="pill">Early access now open · Code <strong>EARLYBIRD</strong> = 30% off (first 50)</span>
@@ -13,6 +13,18 @@
   <div class="cta"><a class="btn primary" href="https://www.creem.io/payment/prod_1FH8LfFZTY4Kdtn2gimqIX">Buy Pro, $99</a><a class="btn" href="#pricing">See pricing</a></div>
   <p class="stack">Java 21 · Spring Boot 3.5 · PostgreSQL · Redis · Flyway · Vue 3 · TypeScript · Pinia · Docker</p>
 </div></div>
+
+<section id="demo" class="alt"><div class="wrap">
+  <h2>See it in action</h2>
+  <p class="sub">Buy, claim repo access with your license key, clone, then let Codex add a full CRUD entity with the bundled skill: migration, tenant-scoped API and passing tests. Real run, about 80 seconds.</p>
+  <div class="demo-frame"><video id="demo-video" class="demo-video" muted loop playsinline preload="none" poster="/assets/demo/demo-poster.jpg" width="1280" height="800" aria-label="AgentReady Stack demo: checkout, claim access, clone, and Codex adding a CRUD entity">
+    <source data-src="/assets/demo/demo.mp4" type="video/mp4">
+    <p>Your browser can't play this video. <a href="/assets/demo/demo.gif">View the demo GIF</a> or <a href="/assets/demo/demo.mp4">download the MP4</a>.</p>
+  </video></div>
+  <noscript><p class="sub"><a href="/assets/demo/demo.mp4">Watch the demo (MP4)</a></p></noscript>
+</div></section>
+<script>(function(){var v=document.getElementById("demo-video");if(!v)return;var s=v.querySelector("source");function load(){if(s.dataset.src&&!s.src){s.src=s.dataset.src;v.load();}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;if(r){v.controls=true;}else{var p=v.play();if(p&&p.catch)p.catch(function(){v.controls=true;});}}
+if(!("IntersectionObserver" in window)){v.controls=true;load();return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();}else if(!v.paused){v.pause();}});},{rootMargin:"200px"});io.observe(v);})();</script>
 
 <section id="problem"><div class="wrap">
   <h2>AI agents write code fast. Without guardrails, they also write it wrong.</h2>
