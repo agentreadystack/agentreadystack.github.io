@@ -1,16 +1,16 @@
 <!doctype html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><link rel="icon" type="image/png" href="/assets/favicon.png"><link rel="apple-touch-icon" href="/assets/apple-touch-icon.png"><link rel="stylesheet" href="/assets/style.css">
-<title>AgentReady Stack: AI-ready Spring Boot + Vue SaaS starter for Claude Code & Codex</title>
-<meta name="description" content="A production-minded Spring Boot 3 + Vue 3 SaaS starter with CLAUDE.md, AGENTS.md, subagents and skills, so Claude Code and Codex can build features that fit your codebase.">
-<link rel="canonical" href="https://agentreadystack.com/"><meta property="og:url" content="https://agentreadystack.com/"><meta property="og:title" content="AgentReady Stack"><meta property="og:description" content="AI-ready Spring Boot + Vue SaaS starter for Claude Code & Codex."><meta property="og:image" content="https://agentreadystack.com/assets/logo.png"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@agentreadystack">
+<title>AgentReady Stack: Spring Boot + Vue SaaS starter that caps agent spend</title>
+<meta name="description" content="Java 21 + Vue 3 SaaS starter for Claude Code &amp; Codex: auth, tenants, billing, plus a daily AI spend circuit breaker and shared agent guardrails. One-time from $39.">
+<link rel="canonical" href="https://agentreadystack.com/"><meta property="og:url" content="https://agentreadystack.com/"><meta property="og:title" content="AgentReady Stack"><meta property="og:description" content="Spring Boot + Vue SaaS starter that caps agent spend: auth, tenants, billing, plus AI spend circuit breaker and shared guardrails."><meta property="og:image" content="https://agentreadystack.com/assets/logo.png"><meta name="twitter:card" content="summary"><meta name="twitter:site" content="@agentreadystack">
 </head><body>
 <header class="top"><div class="wrap nav"><a class="brand" href="/"><img src="/assets/logo.png" alt="AgentReady Stack logo">AgentReady Stack</a><nav class="links"><a href="/#demo">Demo</a><a href="/#features">Features</a><a href="/#how">How it works</a><a href="/#pricing">Pricing</a><a href="/#faq">FAQ</a><a href="/claim/">Claim access</a></nav></div></header>
 <main>
 <div class="hero"><div class="wrap">
   <span class="pill">Early access now open · Code <strong>EARLYBIRD</strong> = 30% off (first 50)</span>
-  <h1>The <span class="g">AI-ready</span> Spring Boot + Vue<br>SaaS starter for Claude Code &amp; Codex</h1>
-  <p class="lead">Skip weeks of boilerplate. Get auth, multi-tenancy and roles on Java 21 + Vue 3, plus the agent configuration (CLAUDE.md, AGENTS.md, subagents and skills) that keeps AI coding agents consistent with your architecture.</p>
-  <div class="cta"><a class="btn primary" href="https://www.creem.io/payment/prod_1FH8LfFZTY4Kdtn2gimqIX">Buy Pro, $99</a><a class="btn" href="#pricing">See pricing</a></div>
+  <h1>Spring Boot + Vue SaaS starter that <span class="g">caps agent spend</span></h1>
+  <p class="lead">Auth, tenants, and billing on Java 21 + Vue 3, plus a daily AI spend circuit breaker and shared Claude Code / Codex guardrails so a runaway agent or a leaked key stops at a ceiling you set.</p>
+  <div class="cta"><a class="btn primary" href="https://www.creem.io/payment/prod_1FH8LfFZTY4Kdtn2gimqIX">Buy Pro, $99</a><a class="btn" href="#features">See what's Built vs Shipping next</a></div>
   <p class="stack">Java 21 · Spring Boot 3.5 · PostgreSQL · Redis · Flyway · Vue 3 · TypeScript · Pinia · Docker</p>
 </div></div>
 
@@ -27,19 +27,23 @@
 if(!("IntersectionObserver" in window)){v.controls=true;load();return;}var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){load();}else if(!v.paused){v.pause();}});},{rootMargin:"200px"});io.observe(v);})();</script>
 
 <section id="problem"><div class="wrap">
-  <h2>AI agents write code fast. Without guardrails, they also write it wrong.</h2>
-  <p class="sub">Most "agent-ready" templates target Next.js. Java and Vue teams get generic prompts and agents that ignore the codebase's conventions.</p>
+  <h2>Prototype in a weekend. Product still takes weeks, and agents can torch the bill.</h2>
+  <p class="sub">Most "agent-ready" starters are Next.js. Java + Vue teams still rebuild auth, tenants, and billing, then hope Claude Code or Codex does not silently widen trust or burn API keys.</p>
   <div class="grid">
-    <div class="card"><h3>Weeks of boilerplate</h3><p>Auth, tenants, roles, migrations and CI need to be solved before the first real feature.</p></div>
-    <div class="card"><h3>Agents drift from your architecture</h3><p>Without project rules, agents put logic in controllers, expose entities, edit applied migrations and skip tests.</p></div>
-    <div class="card"><h3>Context is rebuilt every session</h3><p>Each new session re-explains layout, commands and do/don't rules, and still misses some of them.</p></div>
+    <div class="card"><h3>Prototype in a weekend, product for weeks</h3><p>Auth, tenants, roles, webhooks, and CI still have to exist before the first paid user.</p></div>
+    <div class="card"><h3>Agents drift and overspend</h3><p>Without project rules they edit applied migrations; without a spend ceiling a loop can burn the provider bill overnight.</p></div>
+    <div class="card"><h3>Trust widens quietly</h3><p>Plugins, MCP servers, and permission-bypass flags can appear in a session without you noticing. Next.js kits do not solve this for Java.</p></div>
   </div>
 </div></section>
 
 <section id="features" class="alt"><div class="wrap">
   <h2>What's inside</h2>
-  <p class="sub"><span class="tag ok">Built</span> already works in the codebase today. <span class="tag soon">Planned</span> is scheduled for the launch release or shortly after.</p>
+  <p class="sub"><span class="tag ok">Built</span> already works in the codebase today. <span class="tag soon">Shipping next</span> is on the public issue tracker, not claimed as shipped.</p>
   <div class="grid">
+    <div class="card"><h3>Daily AI spend circuit breaker <span class="tag ok">Built</span></h3><p>App-side UTC day caps (<code>AI_DAILY_LIMIT_USD</code> / per-tenant), kill switch, Redis metering; refuses AI calls when over budget or when Redis is down (fails closed). Pair with provider hard caps.</p></div>
+    <div class="card"><h3>Rotate keys without a redeploy <span class="tag ok">Built</span></h3><p>Drop new payment and AI key values under <code>APP_SECRETS_DIR</code>; webhook secrets support a <code>_PREVIOUS</code> overlap window.</p></div>
+    <div class="card"><h3>One guardrail policy for Claude Code &amp; Codex <span class="tag ok">Built</span></h3><p><code>guardrails/policy.json</code> drives a PreToolUse hook and synced rules; blocks permission-bypass flags; SessionStart warns on broad allow rules; CI can fail on checked-in broad permissions.</p></div>
+    <div class="card"><h3>Config integrity, fail-closed deny, sandbox <span class="tag soon">Shipping next</span></h3><p>Inventory plugins/MCP/instruction files vs a pinned baseline (#91); hook crash must not run the tool (#107); optional devcontainer sandbox with no <code>$HOME</code>/ssh mount (#99).</p></div>
     <div class="card"><h3>Auth with JWT <span class="tag ok">Built</span></h3><p>Signup/login with BCrypt, short-lived JWT access tokens and rotating refresh tokens stored in Redis.</p></div>
     <div class="card"><h3>Multi-tenancy <span class="tag ok">Built</span></h3><p>Tenant-scoped data by design: <code>tenant_id</code> on business tables, cross-tenant access returns 404, workspace switching.</p></div>
     <div class="card"><h3>Roles &amp; invites <span class="tag ok">Built</span></h3><p>OWNER / ADMIN / MEMBER with method-level security. Single-use, expiring, email-bound invitations.</p></div>
